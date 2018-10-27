@@ -9,11 +9,6 @@ class App extends Component {
   this.state = {
     soState: 'I am your app.js ‘state’'
   };
-  this.handleClick = this.handleClick.bind(this);
-}
-
-handleClick(){
-  alert('hello from app.js!');
 }
 
   render() {
@@ -22,7 +17,6 @@ handleClick(){
         {this.state.soState}
         <MyComponent
           passedState={this.state.soState}
-          userClick={this.handleClick}
          />
       </div>
     );
