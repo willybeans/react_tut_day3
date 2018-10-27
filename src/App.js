@@ -7,8 +7,13 @@ class App extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    soState: 'I am your ‘state’'
+    soState: 'I am your app.js ‘state’'
   };
+  this.handleClick = this.handleClick.bind(this);
+}
+
+handleClick(){
+  alert('hello from app.js!');
 }
 
   render() {
@@ -17,7 +22,7 @@ class App extends Component {
         {this.state.soState}
         <MyComponent
           passedState={this.state.soState}
-          user='Johnny'
+          userClick={this.handleClick}
          />
       </div>
     );
