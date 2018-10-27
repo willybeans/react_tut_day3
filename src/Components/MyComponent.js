@@ -6,14 +6,19 @@ class MyComponent extends Component {
   this.state = {
     componentState: 'I am your ‘components state’'
   };
+  this.handleClick = this.handleClick.bind(this);
+}
+
+handleClick(){
+  this.props.passStateUp(this.state.componentState);
 }
 
   render() {
     return (
-      <div>
+      <div onClick={this.handleClick}>
         <h1> Hello from your new component </h1>
         <h2>{this.props.passedState}</h2>
-            {this.state.componentState}
+
       </div>
     );
   }
